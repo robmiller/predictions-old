@@ -15,5 +15,14 @@ describe BBC do
     assert_equal 20, @bbc.table.length
     assert_equal 20, @bbc.table.uniq.length
   end
+
+  it "should add the teams to the database" do
+    assert @bbc.table
+    assert_equal 20, RealPosition.count
+
+    @bbc.table.each do |team|
+      assert RealPosition.find(:team => team)
+    end
+  end
 end
 
