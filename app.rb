@@ -14,6 +14,8 @@ require_relative 'lib/models'
 
 require 'letters'
 
+set :haml, :format => :html5, :layout => :layout
+
 get '/' do
   @people = Person.all
   @real = RealPosition.all
