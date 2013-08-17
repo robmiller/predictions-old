@@ -18,3 +18,11 @@ get '/' do
   RealPosition.all.to_json
 end
 
+get '/import' do
+  require_relative 'lib/importer'
+
+  importer = Importer.new('predictions.txt')
+  importer.parse
+  "Imported #{importer.length} people's predictions"
+end
+
