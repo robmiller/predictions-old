@@ -14,6 +14,8 @@ class BBC
     # return the one from the database.
     return RealPosition.all if last_fetched.since(3600).future?
 
+    RealPosition.all.destroy
+
     doc = Nokogiri::HTML(self.class.get('/premier-league/table'))
     positions = doc.css('.league-table tbody[data-full-entry-count="20"] td.team-name a')
       .map { |team| team.content }

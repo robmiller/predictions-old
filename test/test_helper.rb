@@ -10,5 +10,6 @@ require 'rack/test'
 
 DataMapper.setup(:default, 'sqlite3::memory:')
 
+require_relative '../helpers/init'
 require_relative '../lib/models'
 
