@@ -22,15 +22,17 @@ class Importer
 
   def insert_into_db
     @data.each do |person, predictions|
-      Prediction.all(:who => person).destroy
+      person = Person.first_or_create(:name => person)
+      person.predictions.destroy
 
       predictions.each_with_index do |team, position|
-        Prediction.create(
-          :who => person,
+        person.predictions << Prediction.new(
           :team => team,
           :position => position + 1
         )
       end
+
+      person.save
     end
   end
 end
