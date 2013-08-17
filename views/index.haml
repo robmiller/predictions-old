@@ -13,6 +13,8 @@
             %td= real.position
             %td= real.team
 
+    %p Table last updated: #{@real.first.fetched.to_human}
+
   - @people.each do |person|
     .col-md-3
       %h3= person.name
