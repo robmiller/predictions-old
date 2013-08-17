@@ -3,7 +3,14 @@
   %head
     %meta(charset="utf-8")
     %title Predictions
+
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+
+    %link(rel="stylesheet" href="/css/bootstrap.css")
   %body
 
-    %h1 Predictions
-    = yield
+    .container
+      %h1 Predictions
+      = yield
+
+    %script(src="/js/bootstrap.js")

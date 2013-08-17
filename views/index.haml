@@ -1,32 +1,32 @@
-%h2 Reality
+.row
+  .col-md-3
+    %h3 Reality
 
-%table
-  %thead
-    %tr
-      %th Position
-      %th Team
-  %tbody
-    - @real.each do |real|
-      %tr
-        %td= real.position
-        %td= real.team
-
-
-%h2 Predictions
-
-- @people.each do |person|
-  %h3= person.name
-
-  %table
-    %thead
-      %tr
-        %th Position
-        %th Team
-        %th Difference
-    %tbody
-      - person.predictions.each do |p|
+    %table.table.table-striped.table-bordered.table-condensed
+      %thead
         %tr
-          %td= p.position
-          %td= p.team
-          %td= p.difference
+          %th Position
+          %th Team
+      %tbody
+        - @real.each do |real|
+          %tr
+            %td= real.position
+            %td= real.team
+
+  - @people.each do |person|
+    .col-md-3
+      %h3= person.name
+
+      %table.table.table-striped.table-bordered.table-condensed
+        %thead
+          %tr
+            %th Position
+            %th Team
+            %th Difference
+        %tbody
+          - person.predictions.each do |p|
+            %tr
+              %td= p.position
+              %td= p.team
+              %td= p.difference
 
