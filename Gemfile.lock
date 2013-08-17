@@ -67,6 +67,9 @@ GEM
       tilt
     haml-contrib (1.0.0.1)
       haml (>= 3.2.0.alpha.13)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.5)
     json (1.8.0)
     json_pure (1.8.0)
@@ -78,8 +81,12 @@ GEM
       xml-simple
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.7.9)
+    multi_xml (0.5.5)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -123,8 +130,10 @@ DEPENDENCIES
   dm-validations (~> 1.2.0)
   haml (~> 4.0.3)
   haml-contrib (~> 1.0.0.1)
+  httparty (~> 0.11)
   letters (~> 0.4.1)
   maruku (~> 0.6.1)
+  nokogiri (~> 1.6.0)
   rake (~> 10.1.0)
   sinatra (~> 1.4.3)
   sinatra-contrib (~> 1.4.0)

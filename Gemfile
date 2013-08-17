@@ -13,6 +13,10 @@ gem 'stringex', '~> 1.5.1'
 
 gem 'activesupport', '~> 4.0.0'
 
+gem 'httparty', '~> 0.11'
+
+gem 'nokogiri', '~> 1.6.0'
+
 gem 'datamapper', '~> 1.2.0'
 gem 'dm-sqlite-adapter', '~> 1.2.0'
 gem 'dm-migrations', '~> 1.2.0'
