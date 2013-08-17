@@ -16,6 +16,7 @@ require 'letters'
 
 get '/' do
   @people = Person.all
+  @real = RealPosition.all
 
   haml :index
 end

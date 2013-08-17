@@ -1,3 +1,19 @@
+%h2 Reality
+
+%table
+  %thead
+    %tr
+      %th Position
+      %th Team
+  %tbody
+    - @real.each do |real|
+      %tr
+        %td= real.position
+        %td= real.team
+
+
+%h2 Predictions
+
 - @people.each do |person|
   %h3= person.name
 
