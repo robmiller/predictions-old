@@ -26,3 +26,10 @@ get '/import' do
   "Imported #{importer.length} people's predictions"
 end
 
+get '/update-table' do
+  require_relative 'lib/bbc'
+
+  table = BBC.new.table
+  table.join("<br>")
+end
+
