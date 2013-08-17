@@ -16,5 +16,21 @@ class Importer
       data[person] ||= []
       data[person] << team.strip
     end
+
+    insert_into_db
+  end
+
+  def insert_into_db
+    @data.each do |person, predictions|
+      Prediction.all(:who => person).destroy
+
+      predictions.each_with_index do |team, position|
+        Prediction.create(
+          :who => person,
+          :team => team,
+          :position => position + 1
+        )
+      end
+    end
   end
 end
