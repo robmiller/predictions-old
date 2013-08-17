@@ -30,5 +30,10 @@
             %tr
               %td= p.position
               %td= p.team
-              %td= p.difference
+              %td(align="right")= p.difference
+        %tfoot
+          %tr.active
+            %th(colspan="2" align="right") Total
+            %td(align="right")
+              %b= person.predictions_score
 

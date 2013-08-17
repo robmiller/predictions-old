@@ -31,6 +31,10 @@ class Person
   property :name, String
 
   has n, :predictions
+
+  def predictions_score
+    predictions.reduce(0) { |score, p| score + p.difference }
+  end
 end
 
 DataMapper.finalize
