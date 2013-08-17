@@ -1,0 +1,40 @@
+nix	Manchester City
+nix	Manchester United
+nix	Chelsea
+nix	Arsenal
+nix	Tottenham Hotspur
+nix	Liverpool
+nix	Everton
+nix	Swansea
+nix	Newcastle United
+nix	Southampton
+nix	Fulham
+nix	West Bromwich Albion
+nix	West Ham United
+nix	Aston Villa
+nix	Norwich
+nix	Sunderland
+nix	Cardiff City
+nix	Stoke City
+nix	Crystal Palace
+nix	Hull
+lee	Manchester United
+lee	chelsea
+lee	city
+lee	spurs
+lee	arsenal
+lee	liverpool
+lee	everton
+lee	norwich
+lee	villa
+lee	stoke
+lee	newcastle
+lee	swansea
+lee	hull
+lee	cardiff
+lee	fulham
+lee	west ham
+lee	sunderland
+lee	west brom
+lee	southampton
+lee	crystal palace
