@@ -17,7 +17,7 @@ require 'letters'
 set :haml, :format => :html5, :layout => :layout
 
 get '/' do
-  @people = Person.all
+  @people = Person.all.sort_by { |p| p.predictions_score }
   @real = RealPosition.all
 
   haml :index
