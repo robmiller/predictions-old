@@ -15,7 +15,9 @@ require_relative 'lib/models'
 require 'letters'
 
 get '/' do
-  RealPosition.all.to_json
+  @people = Person.all
+
+  haml :index
 end
 
 get '/import' do

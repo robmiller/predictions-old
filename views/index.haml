@@ -1,0 +1,16 @@
+- @people.each do |person|
+  %h3= person.name
+
+  %table
+    %thead
+      %tr
+        %th Position
+        %th Team
+        %th Difference
+    %tbody
+      - person.predictions.each do |p|
+        %tr
+          %td= p.position
+          %td= p.team
+          %td
+
