@@ -15,6 +15,13 @@ class Prediction
   property :position, Integer
 
   belongs_to :person
+
+  def difference
+    real = RealPosition.first(team: team)
+    return 0 unless real
+
+    (real.position - position).abs
+  end
 end
 
 class Person
