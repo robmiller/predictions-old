@@ -9,9 +9,19 @@
           %th Team
       %tbody
         - @real.each do |real|
-          %tr
-            %td= real.position
-            %td= real.team
+          - case real.position
+            - when 1
+              %tr(class="success")
+                %td= real.position
+                %td= real.team
+            - when 18..20
+              %tr(class="danger")
+                %td= real.position
+                %td= real.team
+            - else
+              %tr
+                %td= real.position
+                %td= real.team
 
     %p Table last updated: #{@real.first.fetched.to_human}
 
@@ -27,10 +37,22 @@
             %th Difference
         %tbody
           - person.predictions.each do |p|
-            %tr
-              %td= p.position
-              %td= p.team
-              %td(align="right")= p.difference
+            - case p.position
+              - when 1
+                %tr(class="success")
+                  %td= p.position
+                  %td= p.team
+                  %td(align="right")= p.difference
+              - when 18..20
+                %tr(class="danger")
+                  %td= p.position
+                  %td= p.team
+                  %td(align="right")= p.difference
+              - else
+                %tr
+                  %td= p.position
+                  %td= p.team
+                  %td(align="right")= p.difference
         %tfoot
           %tr.active
             %th(colspan="2" align="right") Total
