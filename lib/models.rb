@@ -20,7 +20,12 @@ class Prediction
     real = RealPosition.first(team: team)
     return 0 unless real
 
-    (real.position - position).abs
+    difference = (real.position - position).abs
+    if [1, 18, 19, 20].include?(position)
+      difference * 2
+    else
+      difference
+    end
   end
 end
 
